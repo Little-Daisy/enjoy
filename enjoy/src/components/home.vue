@@ -12,7 +12,7 @@
         </div>
         <div class="content">
             <ul>
-              <li v-for="data in item.tabs">   
+              <li v-for="data in item.tabs" @click="handleClick(data.enjoy_url.split('?')[1])">   
                 <img :src="data.url" alt="">
                 <h3>{{data.title}}</h3>
                 <p>{{data.desc}}</p>
@@ -52,6 +52,10 @@ export default {
         this.itemlist = [...this.itemlist,...res.data]
       })
 
+    },
+    handleClick(id){
+      console.log(id)
+      this.$router.push('/detail/'+id);
     }
   },
   mounted(){
@@ -113,3 +117,11 @@ export default {
    
   }
 </style>
+
+
+
+
+
+id=1004528&sub_product_id=5008577
+
+id=1004528&sub-product-id=5008577

@@ -8,6 +8,7 @@ import list from'../components/list.vue'
 import detail from'../components/detail.vue'
 import discovery from'../components/discovery.vue'
 import discoveryDes from'../components/discoveryDes.vue'
+import login from'../components/login.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -47,6 +48,10 @@ export default new Router({
     {
     	path:"/discoveryDes",
     	component:discoveryDes
+    },
+    {
+        path:"/login",
+        component:login
     },
     {
       path: '/',

@@ -21,6 +21,11 @@ module.exports = {
             host:"https://s1.ricebook.com",
             changeOrigin:true
         },
+        '/users':{
+          target:'http://localhost:3000',
+          host:'localhost:3000',
+          changeOrigin:true
+        }
       
     },
 

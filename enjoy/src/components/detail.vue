@@ -47,32 +47,63 @@ export default {
     }
   },
   mounted(){
+    var reg=/^id\d*/;
+    if(reg.test(this.$route.params.mid)){
+      console.log('aaaaaaaaaaaaa')
+            axios.get('https://api.ricebook.com/product/info/product_detail.json?product_'+this.$route.params.mid).then(result=>{
+              this.dataObj=result.data.basic;
+              console.log(this.dataObj)
 
-  	axios.get('https://api.ricebook.com/product/info/product_detail.json?product_id='+this.$route.params.mid).then(result=>{
-  		this.dataObj=result.data.basic;
-  		console.log(this.dataObj)
+              // console.log(result.data)
+              this.$nextTick(()=>{
+            // console.log(1)
+              new Swiper('.swiper-container',{
+                 pagination: {
+                  el: '.swiper-pagination',
+                  },
+                  loop: true, // 循环模式选项
+                  autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  },
+                 navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+           });
 
-  		// console.log(result.data)
-  		this.$nextTick(()=>{
-  	// console.log(1)
-	  	new Swiper('.swiper-container',{
-	       pagination: {
-	  	 	  el: '.swiper-pagination',
-	  	 		},
-	  	    loop: true, // 循环模式选项
-	  	    autoplay: {
-		        delay: 2500,
-		        disableOnInteraction: false,
-		      },
-	     	 navigation: {
-	        nextEl: '.swiper-button-next',
-	        prevEl: '.swiper-button-prev',
-	      },
-	 });
+            })
+              console.log(result.data.basic)
+            });
+    }else{
+      console.log('bbbbbbbbbb')
+          axios.get('https://api.ricebook.com/product/info/product_detail.json?product_id='+this.$route.params.mid).then(result=>{
+            this.dataObj=result.data.basic;
+            console.log(this.dataObj)
 
-  	})
-  		console.log(result.data.basic)
-  	});
+            // console.log(result.data)
+            this.$nextTick(()=>{
+          // console.log(1)
+            new Swiper('.swiper-container',{
+               pagination: {
+                el: '.swiper-pagination',
+                },
+                loop: true, // 循环模式选项
+                autoplay: {
+                  delay: 2500,
+                  disableOnInteraction: false,
+                },
+               navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+         });
+
+          })
+            console.log(result.data.basic)
+          });
+    }
+  
 
   },
 
