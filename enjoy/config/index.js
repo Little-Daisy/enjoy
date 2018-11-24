@@ -22,7 +22,7 @@ module.exports = {
             changeOrigin:true
         },
         '/users':{
-          target:'http://localhost:3000',
+          target:'http://10.2.157.176:3000',
           host:'localhost:3000',
           changeOrigin:true
         }
