@@ -66,8 +66,8 @@
 <style scoped lang="scss">
 .login{
 	width:100%;
-	margin-left: 30px;
-	margin-right:30px;
+	padding: 0 30px;
+	box-sizing: border-box
 }
 	img{
 		width: 150px;
@@ -97,7 +97,7 @@
 			border:1px solid #e0e0e0;
 			background: white;
 			color: #bdc0c5;
-			margin-left:19px;
+			margin-left:7px;
 			margin-top:-5px;
 		}
 	}
