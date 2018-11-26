@@ -23,7 +23,7 @@ module.exports = {
         },
         '/users':{
           target:'http://10.2.157.176:3000',
-          host:'localhost:3000',
+          host:'10.2.157.176:3000',
           changeOrigin:true
         },
         "/hub/home/v1":{
