@@ -10,6 +10,9 @@ import discovery from'../components/discovery.vue'
 import discoveryDes from'../components/discoveryDes.vue'
 import login from'../components/login.vue'
 Vue.use(Router)
+import Goods from '../components/goods.vue'
+import News from '../components/news.vue'
+import Details from '../components/details.vue'
 
 export default new Router({
   routes: [
@@ -47,15 +50,35 @@ export default new Router({
     },
     {
     	path:"/discoveryDes",
-    	component:discoveryDes
+    	component:discoveryDes,
+        children:[
+        {
+            path:"goods",
+            component:Goods
+        },
+        {
+            path:"goods/:mid",
+            component:Goods
+        },
+        {
+            path:"news",
+            component:News
+        },
+      
+        ]
     },
     {
         path:"/login",
         component:login
     },
     {
+        path:"/details/:mid",
+        component:Details
+    },
+    {
       path: '/',
       component: home
-    }
+    },
+    
   ]
 })
