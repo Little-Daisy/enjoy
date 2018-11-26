@@ -46,19 +46,21 @@
 		 		<span>Tangotian</span>
 		 	</p>
 			<p>菜品质量5.0|就餐环境4.0|餐厅服务3.0</p>
-			<p>
+			<p class="foot">
 				<span>餐具精美</span>
 				<span>干净卫生</span>
 				<span>食材新鲜</span>
 			</p>
 			<p>
-				<img lazy="loaded" src="https://image.ricebook.com/feedback/1496288873340002?imageView2/2/w/210/h/210|watermark/1/image/aHR0cHM6Ly9pbWFnZS5yaWNlYm9vay5jb20vd20ucG5n/dissolve/100/gravity/SouthEast/ws/.1" style="width: 210px; height: 210px;">
-			</p>
-			<p>
-				<img lazy="loaded" src="https://image.ricebook.com/feedback/1496288873340001?imageView2/2/w/210/h/210|watermark/1/image/aHR0cHM6Ly9pbWFnZS5yaWNlYm9vay5jb20vd20ucG5n/dissolve/100/gravity/SouthEast/ws/.1" style="width: 210px; height: 210px;">
-			</p>
-			<p>
-				<img lazy="loaded" src="https://image.ricebook.com/feedback/1496288873340003?imageView2/2/w/210/h/210|watermark/1/image/aHR0cHM6Ly9pbWFnZS5yaWNlYm9vay5jb20vd20ucG5n/dissolve/100/gravity/SouthEast/ws/.1" style="width: 210px; height: 210px;">
+
+					<img lazy="loaded" src="https://image.ricebook.com/feedback/1496288873340002?imageView2/2/w/210/h/210|watermark/1/image/aHR0cHM6Ly9pbWFnZS5yaWNlYm9vay5jb20vd20ucG5n/dissolve/100/gravity/SouthEast/ws/.1" style="width: 96px; height: 96px;">
+	
+
+					<img lazy="loaded" src="https://image.ricebook.com/feedback/1496288873340001?imageView2/2/w/210/h/210|watermark/1/image/aHR0cHM6Ly9pbWFnZS5yaWNlYm9vay5jb20vd20ucG5n/dissolve/100/gravity/SouthEast/ws/.1" style="width: 96px; height: 96px;">
+	
+
+					<img lazy="loaded" src="https://image.ricebook.com/feedback/1496288873340003?imageView2/2/w/210/h/210|watermark/1/image/aHR0cHM6Ly9pbWFnZS5yaWNlYm9vay5jb20vd20ucG5n/dissolve/100/gravity/SouthEast/ws/.1" style="width: 96px; height: 96px;">
+	
 			</p>
 		 </div>
 			
@@ -247,8 +249,81 @@ export default {
 	.evaluation{
 		width: 100%;
 		height: 329px;
-		p:nth-of-type{
-			
+		p:nth-of-type(1){
+			font-size: 20px;
+			color: #40444c;
+			padding-top: 24px;
+			margin-left: 134px;
 		};
-	}
+		p:nth-of-type(2){
+			span{
+				font-size: 14px;
+				color: #1a1a1a;
+				margin-left: 4px;
+			}
+			img{
+				margin-top: 22px;
+				margin-left: 18px;
+			}
+		}
+		p:nth-of-type(3){
+			font-size: 12px;
+			color: #92969c;
+			margin-left: 18px;
+			margin-top: 10px;
+		}
+		p:nth-of-type(4){
+			float: left;
+			margin-top: 14px;
+			span:nth-of-type(1){
+				font-size: 16px;
+				color: #92969c;
+				width: 75px;
+				height: 21px;
+				background: #f2f3f5;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 21px;
+				margin-left: 18px;
+				border:1px solid #f2f3f5;
+			}
+			span:nth-of-type(2){
+				font-size: 16px;
+				color: #92969c;
+				width: 75px;
+				height: 21px;
+				background: #f2f3f5;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 21px;
+				margin-left: 9px;
+			
+			}
+			span:nth-of-type(3){
+				font-size: 16px;
+				color: #92969c;
+				width: 75px;
+				height: 21px;
+				background: #f2f3f5;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 21px;
+				margin-left: 9px;
+		
+			}
+		}
+		p:nth-of-type(5){
+			float: left;
+			margin-top: 14px;
+			img:nth-of-type(1){
+				margin-left: 18px;
+			}
+			img:nth-of-type(2){
+				margin-left: 8px;
+			}
+			img:nth-of-type(3){
+				margin-left: 8px;
+			}
+		}
+	}	
 </style>
